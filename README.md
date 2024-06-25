@@ -10,7 +10,7 @@ service 3: image generator service - interact with an AI API
 
 ## Services Features
 
-  ### [poke service](LINK_TO_GATEWAY_PROJECT).
+  ### [poke service](https://github.com/Janamawasy/pokemon_service/tree/main).
   
   - Search Pokemon by id or name
   - Search all Pokemons by trainer or type
@@ -22,7 +22,7 @@ service 3: image generator service - interact with an AI API
   - Delete Pokemon from trainer
   - Evolve Pokemon of specific trainer
 
-  ### [poke images service](LINK_TO_GATEWAY_PROJECT).
+  ### [poke images service](https://github.com/Janamawasy/poke_images_service).
   
   - Retrieve a Pokemon image by Pokemon name
   - Add a new Pokemon image
