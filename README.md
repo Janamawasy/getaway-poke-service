@@ -30,12 +30,11 @@ service 3: image generator service - interact with an AI API
   - Update an existing Pokemon image
   - Display a Pokemon image
 
-  ### [image generator service](LINK_TO_GATEWAY_PROJECT).
+  ### [image generator service](https://github.com/Janamawasy/generate-images-service).
     
-  - 
-
-
-
+  - Generate an image based on a provided prompt.
+  - Generate a battle image between two Pokémon.
+  - Generate a hypothetical evolution image from Pokémon1 to Pokémon2.
 
 ## env Setup
 
