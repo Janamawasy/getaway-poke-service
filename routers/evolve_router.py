@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from api_connector import ApiConnector
+from connections.api_connector import ApiConnector
 
 router = APIRouter()
 
