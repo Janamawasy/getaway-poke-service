@@ -2,7 +2,7 @@ import os
 import uvicorn
 from fastapi import FastAPI
 from dotenv import load_dotenv
-from routers import evolve_router, trainers_router, pokemons_router, image_router
+from routers import evolve_router, trainers_router, pokemons_router, image_router, image_generator_router
 
 load_dotenv()
 
@@ -15,6 +15,7 @@ app.include_router(pokemons_router.router, prefix='/pokemons')
 app.include_router(trainers_router.router, prefix='/trainers')
 app.include_router(image_router.router, prefix='/images')
 app.include_router(evolve_router.router, prefix='/evolve')
+app.include_router(image_generator_router.router, prefix='/ai/images')
 
 
 @app.get('/')

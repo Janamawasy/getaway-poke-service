@@ -149,13 +149,12 @@ class ApiConnector:
                 raise HTTPException(status_code=400, detail=str(e))
 
     def get_image(self, poke_name):
-        json_response = None
         try:
             response2 = requests.get(f"{self.poke_images_service}/image/?poke_name={poke_name}")
             response2.raise_for_status()
             return StreamingResponse(io.BytesIO(response2.content), media_type="image/svg+xml")
         except RequestException as e:
-            raise HTTPException(status_code=400, detail=json_response['detail'] if json_response else str(e))
+            raise HTTPException(status_code=400, detail=str(e))
 
     def add_image(self, poke_name):
         json_response = None
