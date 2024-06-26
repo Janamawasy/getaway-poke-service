@@ -36,6 +36,9 @@ service 3: image generator service - interact with an AI API
   - Generate a battle image between two Pokémon.
   - Generate a hypothetical evolution image from Pokémon1 to Pokémon2.
 
+## Endpoints diagram
+![Description of the image](/endpoints-duagram.png)
+
 ## env Setup
 
   ```
