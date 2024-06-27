@@ -33,11 +33,15 @@ service 3: image generator service - interact with an AI API
   ### [image generator service](https://github.com/Janamawasy/generate-images-service).
     
   - Generate an image based on a provided prompt.
-  - Generate a battle image between two Pokémon.
-  - Generate a hypothetical evolution image from Pokémon1 to Pokémon2.
+  - Generate an imaginary fusion image between two Pokémon.
+  - Generate a hypothetical evolution image for Pokémon.
+
+## Getaway Endpoints
+![Description of the image](/getaway_endpoint.png)
+
 
 ## Endpoints diagram
-![Description of the image](/endpoints-duagram.png)
+![Description of the image](/endpoints_diagram.png)
 
 ## env Setup
 
