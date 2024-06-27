@@ -16,18 +16,18 @@ class ApiImageGenerator:
     def generate_battle_image(self, poke1_name, poke2_name):
         try:
             response = requests.post(
-                f"{self.image_generator_service}/battle?poke1_name={poke1_name}&poke2_name={poke2_name}")
+                f"{self.image_generator_service}/fusion?poke1_name={poke1_name}&poke2_name={poke2_name}")
             response.raise_for_status()
-            return StreamingResponse(io.BytesIO(response.content), media_type="image/svg+xml")
+            return StreamingResponse(io.BytesIO(response.content), media_type="image/png")
         except RequestException as e:
             raise HTTPException(status_code=400, detail=str(e))
 
-    def generate_evolution_image(self, poke1_name, poke2_name):
+    def generate_evolution_image(self, poke_name):
         try:
             response = requests.post(
-                f"{self.image_generator_service}/evolve?poke1_name={poke1_name}&poke2_name={poke2_name}")
+                f"{self.image_generator_service}/evolve?poke_name={poke_name}")
             response.raise_for_status()
-            return StreamingResponse(io.BytesIO(response.content), media_type="image/svg+xml")
+            return StreamingResponse(io.BytesIO(response.content), media_type="image/png")
         except RequestException as e:
             raise HTTPException(status_code=400, detail=str(e))
 
@@ -35,7 +35,7 @@ class ApiImageGenerator:
         try:
             response = requests.post(f"{self.image_generator_service}/?prompt={prompt}")
             response.raise_for_status()
-            return StreamingResponse(io.BytesIO(response.content), media_type="image/svg+xml")
+            return StreamingResponse(io.BytesIO(response.content), media_type="image/png")
         except RequestException as e:
             raise HTTPException(status_code=400, detail=str(e))
 

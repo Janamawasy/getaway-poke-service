@@ -3,7 +3,7 @@ from connections.image_gen_api_connector import ApiImageGenerator
 
 router = APIRouter()
 
-@router.post('/battle')
+@router.post('/fusion')
 async def generate_battle(poke1_name: str, poke2_name: str):
     try:
         connector = ApiImageGenerator()
@@ -14,10 +14,10 @@ async def generate_battle(poke1_name: str, poke2_name: str):
 
 
 @router.post('/evolve')
-async def generate_evolution(poke1_name: str, poke2_name: str):
+async def generate_evolution(poke_name: str):
     try:
         connector = ApiImageGenerator()
-        res = connector.generate_evolution_image(poke1_name, poke2_name)
+        res = connector.generate_evolution_image(poke_name)
         return res
     except HTTPException as e:
         raise e
