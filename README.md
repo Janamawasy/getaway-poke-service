@@ -37,8 +37,10 @@ service 3: image generator service - interact with an AI API
   - Generate a hypothetical evolution image for Pokémon.
 
 ## Getaway Endpoints
-![Description of the image](/getaway_endpoint.png)
+![Description of the image](/endpoints-8000.png)
 
+## Microservices diagram
+![Description of the image](/microservices-diagram.png)
 
 ## Endpoints diagram
 ![Description of the image](/endpoints_diagram.png)
